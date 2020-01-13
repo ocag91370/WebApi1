@@ -7,13 +7,19 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi1.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("[controller]")]
     public class TestController : ControllerBase
     {
         public TestController()
         {
 
+        }
+
+        [HttpGet]
+        public ActionResult Get()
+        {
+            return Ok();
         }
     }
 }
